@@ -1,0 +1,10 @@
+@media screen and (max-width: 991.98px) {
+
+}
+
+.backimg-1, .backimg-2, .backimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
