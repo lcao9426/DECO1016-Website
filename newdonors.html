@@ -16,6 +16,30 @@
         <a href="./index.html">
             <img id="logo-img"  src="./assets/img/redcrosslogo.png" alt="redcrosslogo" srcset="./assets/img/redcrosslogo.png">
         </a>
+        <div id="navright">
+            <ul class="navul">
+                <li class="nav-item"><a class="nava" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nava" href="./donorportal.html">Donors</a></li>
+                <li class="nav-item"><a class="nava" href="./recipient.html">Recipients</a></li>
+                <li class="nav-item"><a class="nava" href="./about-us.html">About Us</a></li>
+            </ul>
+        </div>
+        <div id="mobilenavbutton" onclick="openMNav()" ontouch="openMNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="sidebarwrap">
+            <div id="mobilenavsidebar">
+                <ul class="mnavul">
+                    <li class="mnav-item"><a class="mnava" onclick="closeMNav()" ontouch="closeMNav()">Back</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./index.html">Home</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./donorportal.html">Donors</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./recipient.html">Recipients</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div id="maincontent">
         <h1 id="recipient-title">
@@ -53,5 +77,6 @@
         </div>
     </div>
     <div id="colorfilter" class="newdonor"></div>
+    <script src="./assets/js/nav.js"></script>
 </body>
 </html>

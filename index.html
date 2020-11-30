@@ -10,10 +10,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet"><body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</head>
+<body>
     <div id="nav">
         <a href="./index.html">
             <img id="logo-img"  src="./assets/img/redcrosslogo.png" alt="redcrosslogo" srcset="./assets/img/redcrosslogo.png">
         </a>
+        <div id="navright">
+            <ul class="navul">
+                <li class="nav-item"><a class="nava" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nava" href="./donorportal.html">Donors</a></li>
+                <li class="nav-item"><a class="nava" href="./recipient.html">Recipients</a></li>
+                <li class="nav-item"><a class="nava" href="./about-us.html">About Us</a></li>
+            </ul>
+        </div>
+        <div id="mobilenavbutton" onclick="openMNav()" ontouch="openMNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="sidebarwrap">
+            <div id="mobilenavsidebar">
+                <ul class="mnavul">
+                    <li class="mnav-item"><a class="mnava" onclick="closeMNav()" ontouch="closeMNav()">Back</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./index.html">Home</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./donorportal.html">Donors</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./recipient.html">Recipients</a></li>
+                    <li class="mnav-item"><a class="mnava" href="./about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="downsprite">
+        <img id="downimg" onclick="scrolltobottom()" ontouchstart="scrolltobottom()" src="./assets/img/downsprite.png" alt="Scroll down arrow">
     </div>
     <div id="maincontent">
         <h1 id="centertext">
@@ -67,11 +98,12 @@
                         <img class="sal-icon" src="./assets/icon/recipient.svg" alt="Recipients Icon" srcset="./assets/icon/recipient.svg">
                     </div>
                     <p class="sal-text">
-                        RECIPIENTS DONORS
+                        RECIPIENTS
                     </p>
                 </div>
             </a>
         </div>
     </div>
+    <script src="./assets/js/nav.js"></script>
 </body>
 </html>

@@ -1,6 +1,11 @@
+html {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
 html,
 body {
-  max-width: 100%;
+  width: 100vw;
   overflow-x: hidden;
   margin: 0;
 }
@@ -11,6 +16,7 @@ body {
   background-attachment: fixed;
   background-position: right bottom;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 #logo-img {
@@ -26,6 +32,7 @@ body {
 }
 
 #nav {
+  width: 100vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
   position: absolute;
@@ -254,6 +261,38 @@ iframe {
   color: #7c0c0c;
 }
 
+#downsprite {
+  position: fixed;
+  height: 5vh;
+  bottom: 3vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 500;
+  opacity: 1;
+  transition: opacity 0.33s;
+}
+
+#downsprite.transparent {
+  opacity: 0;
+}
+
+#downsprite.hidden {
+  display: none;
+}
+
+#downimg {
+  height: 100%;
+  filter: drop-shadow(5px 5px 1vh rgba(0, 0, 0, 0.9));
+  transition: filter 0.33s;
+  z-index: 500;
+}
+
+#downimg:hover {
+  height: 100%;
+  filter: drop-shadow(5px 5px 1vh rgba(255, 255, 255, 0.5));
+}
+
 .bold {
   font-weight: 700;
 }
@@ -333,6 +372,13 @@ iframe {
   font-family: "Quicksand", sans-serif;
 }
 
+.wb-button.inline {
+  display: inline-flex;
+  margin-block-start: 0.25em !important;
+  margin-block-end: 0.25em !important;
+  margin-right: 2vh;
+}
+
 .wb-button:hover {
   color: #ec7e80;
   cursor: pointer;
@@ -370,6 +416,32 @@ iframe {
 
 .custom-shape-divider-bottom-1606642467 .shape-fill {
   fill: #fff;
+}
+
+#mobilenavbutton {
+  width: 6vh;
+  display: absolute;
+  transition: filter 0.33s;
+  filter: drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.5));
+}
+
+#mobilenavbutton:hover {
+  filter: drop-shadow(0px 0px 2vh rgba(0, 0, 0, 0.9));
+}
+
+#mobilenavbutton span {
+  display: block;
+  width: 6vh;
+  height: 1vh;
+  margin-bottom: 1vh;
+  position: relative;
+  background: #ffbbbc;
+  border-radius: 0.5vh;
+  z-index: 1;
+}
+
+#mobilenavbutton:hover span {
+  background: #ffe4e5;
 }
 
 input {
@@ -433,6 +505,116 @@ input:focus ~ .highlight {
   animation: inputHighlight 0.33s ease-in-out;
 }
 
+#navright {
+  float: right;
+  margin-right: 7vh;
+}
+
+#mobilenavbutton {
+  display: none;
+  float: right;
+  margin-right: 7vh;
+}
+
+#sidebarwrap {
+  margin-top: -5vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -100;
+  overflow-x: hidden;
+}
+
+#mobilenavsidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 0, 0, 0.9);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(100vw);
+}
+
+.noyflow {
+  overflow-y: hidden;
+}
+
+#sidebarwrap.shownav {
+  z-index: 1000;
+}
+
+#mobilenavsidebar.shownav {
+  transform: translateX(0vw) !important;
+}
+
+.mnav-item {
+  display: block;
+  text-align: center;
+  padding: 2.5vh 3vh;
+  padding-bottom: 2vh !important;
+  font-size: 3vh;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+}
+
+ul.mnavul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a.mnava {
+  color: #ffbbbc;
+  text-decoration: none;
+  padding-bottom: calc(0.5vh - 1px);
+  border-bottom: 1px solid #e66268;
+  text-shadow: 0px 0px 1vh rgba(0, 0, 0, 0.5);
+  transition: color 0.33s ease-in-out, border-bottom 0.33s ease-in-out,
+    text-shadow 0.33s ease-in-out;
+}
+
+a.mnava:hover {
+  text-shadow: 0px 0px 3vh rgba(0, 0, 0, 1);
+  color: #fff6f6;
+  border-bottom: 1px solid #ffe4e5;
+}
+
+.nav-item {
+  display: inline-block;
+  text-align: center;
+  padding: 2.5vh 3vh;
+  padding-bottom: 2vh !important;
+  font-size: 3vh;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+}
+
+ul.navul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a.nava {
+  color: #ffbbbc;
+  text-decoration: none;
+  padding-bottom: calc(0.5vh - 1px);
+  border-bottom: 1px solid #e66268;
+  text-shadow: 0px 0px 1vh rgba(0, 0, 0, 0.5);
+  transition: color 0.33s ease-in-out, border-bottom 0.33s ease-in-out,
+    text-shadow 0.33s ease-in-out;
+}
+
+a.nava:hover {
+  text-shadow: 0px 0px 3vh rgba(0, 0, 0, 1);
+  color: #fff6f6;
+  border-bottom: 1px solid #ffe4e5;
+}
+
 @keyframes inputHighlight {
   from {
     background: #e66268;
@@ -478,6 +660,16 @@ input:focus ~ .highlight {
     margin-left: 2.3vh;
     font-size: 11.5vh;
     line-height: 11.5vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  #navright {
+    display: none;
+  }
+
+  #mobilenavbutton {
+    display: block;
   }
 }
 
