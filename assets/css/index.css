@@ -159,6 +159,30 @@ body {
   padding-left: 1vh;
 }
 
+.blockquote.lesstop {
+  margin-top: 10.5vh;
+  margin-bottom: 5vh;
+}
+
+.blockquote.mintop {
+  margin-top: 6vh !important;
+}
+
+.blockquote.minpad {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+.blockquote.small {
+  font-size: 6vh;
+  line-height: 6vh;
+}
+
+.blockquote.smaller {
+  font-size: 4.5vh;
+  line-height: 4.5vh;
+}
+
 #recipient-body {
   background-image: url("../img/recipientbg.jpeg");
   background-position: center;
@@ -219,6 +243,15 @@ body {
 
 #extras {
   top: 100vh;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  padding-bottom: 7vh;
+  background-color: #fff;
+}
+
+#extrasaboutus {
+  top: 20vh;
   left: 0;
   position: absolute;
   width: 100vw;
@@ -670,6 +703,10 @@ a.nava:hover {
 
   #mobilenavbutton {
     display: block;
+  }
+
+  #extrasaboutus {
+    top: 15vh;
   }
 }
 
